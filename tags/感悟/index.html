@@ -17,22 +17,16 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>STM32不走时问题解决方法 | HiTechTech</title>
-  <meta name="description" content="程序流程为：完成初始化后每隔 1 秒读取当前时间并通过串口发送给PC串口助手。下载程序上电后，一直显示设置的时间，不走时。很是疑惑，查阅资料后觉得可能是因为没读取日期，加了读日期语句后验证，果不其然。 PS:必须先读时间，再读日期，否则也会出现不走时问题。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="STM32不走时问题解决方法">
-<meta property="og:url" content="https://hitechtech.github.io/2021/07/07/%E4%B8%8D%E8%B5%B0%E6%97%B6%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/index.html">
+  <title>标签: 感悟 | HiTechTech</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://hitechtech.github.io/tags/%E6%84%9F%E6%82%9F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="程序流程为：完成初始化后每隔 1 秒读取当前时间并通过串口发送给PC串口助手。下载程序上电后，一直显示设置的时间，不走时。很是疑惑，查阅资料后觉得可能是因为没读取日期，加了读日期语句后验证，果不其然。 PS:必须先读时间，再读日期，否则也会出现不走时问题。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-07T06:19:01.000Z">
-<meta property="article:modified_time" content="2021-07-07T06:21:33.563Z">
 <meta property="article:author" content="HiTechTech">
-<meta property="article:tag" content="C语言">
-<meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://hitechtech.github.io/2021/07/07/%E4%B8%8D%E8%B5%B0%E6%97%B6%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/index.html">
+  <link rel="canonical" href="https://hitechtech.github.io/tags/%E6%84%9F%E6%82%9F/index.html">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -141,109 +135,64 @@
 </aside> -->
 
   
-  
-<main class="main" role="main">
-  <div class="content">
-  <article id="post-不走时问题解决方法" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-    
-    <div class="article-header">
-      
+  <main class="main" role="main">
+  <article class="content article article-tags post-type-list" itemscope="">
+    <header class="article-header">
+      <h1 itemprop="name" class="hidden-xs">标签: 感悟</h1>
+      <p class="text-muted hidden-xs">共 1 篇文章</p>
+      <nav role="navigation" id="nav-main" class="okayNav">
+        <ul>
+          <li><a href="/tags">全部</a></li>
+          
+          <li><a href="/tags/电子/">电子</a></li>
+          
+          <li><a href="/tags/C语言/">C语言</a></li>
+          
+          <li><a href="/tags/STM32/">STM32</a></li>
+          
+          <li><a href="/tags/词句/">词句</a></li>
+          
+          <li><a href="/tags/感悟/">感悟</a></li>
+          
+          <li><a href="/tags/虚云/">虚云</a></li>
+          
+          <li><a href="/tags/纳兰性德/">纳兰性德</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <!-- /header -->
+    <div class="article-body">
+      <div class="row">
         
-  
-    <h1 class="article-title" itemprop="name">
-      STM32不走时问题解决方法
-    </h1>
-  
-
-      
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2021/07/07/%E4%B8%8D%E8%B5%B0%E6%97%B6%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="article-date">
-	  <time datetime="2021-07-07T06:19:01.000Z" itemprop="datePublished">2021-07-07</time>
-	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/%E7%94%B5%E5%AD%90/">电子</a>
-  </span>
-
-        
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag">C语言</a>, <a class="article-tag-link-link" href="/tags/STM32/" rel="tag">STM32</a>
-  </span>
-
-
-        
-
-        <!-- <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/07/07/%E4%B8%8D%E8%B5%B0%E6%97%B6%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/#comments" class="article-comment-link">评论</a></span> -->
-        <!--  -->
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <p>程序流程为：完成初始化后每隔 1 秒读取当前时间并通过串口发送给PC串口助手。下载程序上电后，一直显示设置的时间，不走时。很是疑惑，查阅资料后觉得可能是因为没读取日期，加了读日期语句后验证，果不其然。</p>
-<p>PS:必须先读时间，再读日期，否则也会出现不走时问题。</p>
-
-      
-    </div>
-    <div class="article-footer">
-      <!-- <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
+<div class="col-md-6">
     
-    <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="https://hitechtech.github.io/2021/07/07/%E4%B8%8D%E8%B5%B0%E6%97%B6%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="STM32不走时问题解决方法" target="_blank" rel="external">https://hitechtech.github.io/2021/07/07/不走时问题解决方法/</a>
-    </li>
-    
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-</blockquote> -->
+<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="panel-body">
+     <div class="article-meta">
+       <time datetime="2021-07-17T02:37:47.000Z" itemprop="datePublished">2021-07-17</time>
+     </div>
+     <h3 class="article-title" itemprop="name">
+       <a class="article-link" href="/2021/07/17/%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E6%9C%89%E6%84%9F/">数据统计有感</a>
+     </h3>
+   </div>
+   
+   <div class="panel-footer">
+     
+      <a href="/tags/%E6%84%9F%E6%82%9F/" class="label label-default mb">感悟</a>
+     
+     
+   </div>
+   
+</article>
 
 
-    </div>
-  </article>
-  
-    
-  <section id="comments">
-  	
-  </section>
-
-
-  
 </div>
 
-  <nav class="bar bar-footer clearfix" data-stick-bottom>
-  <div class="bar-inner">
-  
-  <ul class="pager pull-left">
-    
-    <li class="prev">
-      <a href="/2021/07/07/STMcubeMX%E7%94%9F%E6%88%90MDK%E5%B7%A5%E7%A8%8B%E5%BC%82%E5%B8%B8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="STMcubeMX生成MDK工程异常解决方法"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
-    
-    <li class="next">
-      <a href="/2021/07/05/%E5%A4%B8%E8%B5%9E%E7%9A%84%E5%8F%A5%E5%AD%90/" title="夸赞的句子"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
-    
-    
-  </ul>
-  
-  
-  
-  <div class="bar-right">
-    
-  </div>
-  </div>
-</nav>
-  
-
-
+      </div>
+    </div>
+  </article>
+   
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -270,12 +219,6 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
-   
-
-
-
-
-   
 
 
 
