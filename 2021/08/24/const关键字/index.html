@@ -18,17 +18,17 @@
   
   
   <title>const关键字 | HiTechTech</title>
-  <meta name="description" content="定义const修饰的数据类型是指常类型，常类型的变量或对象的值自定义完成后是不能被更新的。&#x2F; 限定一个变量不允许被改变，产生静态作用 应用运行时确定常量的值由于被const修饰的变量或对象不允许改变, 所以它对变量能够起到保护作用. 例如: 当常量需要运行时获取值时, 就可以如下定义: 123456#include &quot;stdio.h&quot;void main()&amp;#123;    c">
+  <meta name="description" content="定义const修饰的数据类型是指常量类型，常量类型的变量或对象的值自定义完成后是不能被更新的。&#x2F; 限定一个变量不允许被改变，产生静态作用. 应用某些定义通过宏定义#define可以实现, 但const范围更广, 灵活性更大: const可以定义常量数组, 常量指针等等, 而且const可以在运行时初始化值. 运行时确定常量的值由于被const修饰的变量或对象不允许改变, 所以它对变量能够起到保护作">
 <meta property="og:type" content="article">
 <meta property="og:title" content="const关键字">
 <meta property="og:url" content="https://hitechtech.github.io/2021/08/24/const%E5%85%B3%E9%94%AE%E5%AD%97/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="定义const修饰的数据类型是指常类型，常类型的变量或对象的值自定义完成后是不能被更新的。&#x2F; 限定一个变量不允许被改变，产生静态作用 应用运行时确定常量的值由于被const修饰的变量或对象不允许改变, 所以它对变量能够起到保护作用. 例如: 当常量需要运行时获取值时, 就可以如下定义: 123456#include &quot;stdio.h&quot;void main()&amp;#123;    c">
+<meta property="og:description" content="定义const修饰的数据类型是指常量类型，常量类型的变量或对象的值自定义完成后是不能被更新的。&#x2F; 限定一个变量不允许被改变，产生静态作用. 应用某些定义通过宏定义#define可以实现, 但const范围更广, 灵活性更大: const可以定义常量数组, 常量指针等等, 而且const可以在运行时初始化值. 运行时确定常量的值由于被const修饰的变量或对象不允许改变, 所以它对变量能够起到保护作">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://hitechtech.github.io/2021/08/24/const%E5%85%B3%E9%94%AE%E5%AD%97/Snipaste_2021-08-24_15-42-08.png">
 <meta property="og:image" content="https://hitechtech.github.io/2021/08/24/const%E5%85%B3%E9%94%AE%E5%AD%97/Snipaste_2021-08-24_15-45-35.png">
 <meta property="article:published_time" content="2021-08-24T06:24:13.000Z">
-<meta property="article:modified_time" content="2021-08-24T08:03:55.165Z">
+<meta property="article:modified_time" content="2021-08-26T01:18:48.240Z">
 <meta property="article:author" content="HiTechTech">
 <meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
@@ -186,8 +186,9 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>const修饰的数据类型是指常类型，常类型的变量或对象的值自定义完成后是不能被更新的。/ 限定一个变量不允许被改变，产生静态作用</p>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="运行时确定常量的值"><a href="#运行时确定常量的值" class="headerlink" title="运行时确定常量的值"></a>运行时确定常量的值</h3><p>由于被const修饰的变量或对象不允许改变, 所以它对变量能够起到保护作用.</p>
+        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>const修饰的数据类型是指常量类型，常量类型的变量或对象的值自定义完成后是不能被更新的。/ 限定一个变量不允许被改变，产生静态作用.</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>某些定义通过宏定义#define可以实现, 但const范围更广, 灵活性更大: const可以定义常量数组, 常量指针等等, 而且const可以在运行时初始化值.</p>
+<h3 id="运行时确定常量的值"><a href="#运行时确定常量的值" class="headerlink" title="运行时确定常量的值"></a>运行时确定常量的值</h3><p>由于被const修饰的变量或对象不允许改变, 所以它对变量能够起到保护作用.</p>
 <p>例如: 当常量需要运行时获取值时, 就可以如下定义:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> MaxNum1 = getNum();  <span class="comment">//运行时初始化</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;MaxNum1 = %d&quot;</span>, MaxNum1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>宏定义是无法实现这种需求的, 而且又防止程序运行时改变该变量值.</p>
